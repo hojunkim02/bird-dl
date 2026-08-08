@@ -3,6 +3,7 @@ import torch.nn as nn
 import torch.optim as optim
 import numpy as np
 
+
 # 모델
 model = nn.Sequential(nn.Linear(1, 1))  # 우리가 개선해나갈 모델
 
