@@ -1,0 +1,9 @@
+name: bird_dl
+channels:
+  - pytorch
+  - conda-forge
+dependencies:
+  - pytorch=2.5.1
+  - torchaudio=2.5.1
+  - torchvision=0.20.1
+  - matplotlib=3.11.1
