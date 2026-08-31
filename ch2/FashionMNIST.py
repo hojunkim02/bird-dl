@@ -1,9 +1,7 @@
-import torch
-import torch.nn as nn
-import torch.optim as optim
+from torch import torch, nn, optim
 from torch.utils.data import DataLoader
 from torchvision import datasets, transforms
-import matplotlib.pyplot as plt
+from matplotlib import pyplot as plt
 
 
 # 모델 정의

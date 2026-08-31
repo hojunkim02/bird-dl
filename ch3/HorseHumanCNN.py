@@ -1,8 +1,6 @@
-import urllib.request, zipfile
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-import torch.optim as optim
+from urllib import request
+from zipfile import ZipFile
+from torch import torch, nn, optim, functional as F
 from torch.utils.data import DataLoader
 from torchvision import datasets, transforms
 
@@ -34,9 +32,9 @@ def load_data():
     url = "https://storage.googleapis.com/learning-datasets/horse-or-human.zip"
     file_name = "horse-or-human.zip"
     training_dir = "horse-or-human/training/"
-    urllib.request.urlretrieve(url, file_name)
+    request.urlretrieve(url, file_name)
 
-    zip_ref = zipfile.ZipFile(file_name, "r")
+    zip_ref = ZipFile(file_name, "r")
     zip_ref.extractall(training_dir)
     zip_ref.close()
 
@@ -45,9 +43,9 @@ def load_data():
     )
     file_name = "validation-horse-or-human.zip"
     validation_dir = "horse-or-human/validation/"
-    urllib.request.urlretrieve(url, file_name)
+    request.urlretrieve(url, file_name)
 
-    zip_ref = zipfile.ZipFile(file_name, "r")
+    zip_ref = ZipFile(file_name, "r")
     zip_ref.extractall(validation_dir)
     zip_ref.close()
 
